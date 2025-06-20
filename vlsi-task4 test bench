@@ -1,0 +1,42 @@
+module fir_filter_tb;
+
+    reg clk;
+    reg reset;
+    reg signed [15:0] x;
+    wire signed [31:0] y;
+
+    fir_filter uut (
+        .clk(clk),
+        .reset(reset),
+        .x(x),
+        .y(y)
+    );
+
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    initial begin
+        reset = 1;
+        #10 reset = 0;
+
+        // Input signal
+        x = 16'h1000;
+        #10 x = 16'h2000;
+        #10 x = 16'h3000;
+        #10 x = 16'h4000;
+        #10 x = 16'h5000;
+
+        // Run simulation for 100 cycles
+        #100;
+
+        $finish;
+    end
+
+    initial begin
+        $dumpfile("fir_filter.vcd");
+        $dumpvars(0, fir_filter_tb);
+    end
+
+endmodule

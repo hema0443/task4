@@ -12,7 +12,7 @@
 
 *MENTOR*:NEELA SANTOSH
 
-** In task4 I have written verilog code and test bench to design and simulate a digital FIR(FINITE IMPLUSE RESPONSE) filter using verilog and I have used edaplayground for writing code and for execution of simulation**
+** In task4 I have written verilog code and test bench to design and simulate a digital FIR(FINITE IMPLUSE RESPONSE) filter using verilog and I have used edaplayground for writing code and for the simulation of code and In edaplayground I have used simulator as Icarus verilog 12.0 and I have choosed run option as open EPWave after run for the simulation.**
 
 *simulation*:
 
